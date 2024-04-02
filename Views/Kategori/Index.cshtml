@@ -6,19 +6,23 @@
 }
 
 <table class="table table-bordered"
-      <tr>
-          <th>Kategori Id</th>
-          <th>Kategori Ad</th>
-      </tr> 
+    <tr>
+        <th>Kategori Id</th>
+        <th>Kategori Ad</th>
+        <th>Sil</th>
+        <th>Guncelle</th>
+    </tr> 
     <tbody>
         @foreach(var ktgr in Model)
             {
                 <tr>
                     <td>@ktgr.KATEGORIID</td>
                     <td>@ktgr.KATEGORIAD</td>
+                    <td><a href="/Kategori/sil/@ktgr.KATEGORIID " class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Kategori/guncelle/@ktgr.KATEGORIID" class="btn btn-success">Guncelle</a></td>
                 </tr>
             }
     </tbody>
-       
 </table>
+<a href="/Kategori/YeniKategori/" class="btn btn-primary">Yeni Kategori Ekle</a>
 
