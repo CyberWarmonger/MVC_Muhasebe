@@ -28,7 +28,7 @@ namespace MVC_Stok.Controllers
             db.SaveChanges();
             return View();
         }
-        public ActionResult SIL(int id)
+        public ActionResult Sil (int id)
         {
             var musteri = db.TBLMUSTERILER.Find(id);
             db.TBLMUSTERILER.Remove(musteri);

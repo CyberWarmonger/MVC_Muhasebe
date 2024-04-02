@@ -37,7 +37,7 @@ namespace MVC_Stok.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-        public ActionResult SIL(int id)
+        public ActionResult Sil(int id)
         {
             var urun = db.TBLURUNLER.Find(id);
             db.TBLURUNLER.Remove(urun);
