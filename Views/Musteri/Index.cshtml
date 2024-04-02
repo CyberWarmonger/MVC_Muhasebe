@@ -1,0 +1,25 @@
+﻿@using MVC_Stok.Models.Entity
+@model List<TBLMUSTERILER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered"
+    <tr>
+        <th>Musteri Id</th>
+        <th>Musteri Adi</th>
+        <th>Musteri Soyadi</th>
+
+    </tr>
+    <tbody>
+        @foreach (var mus in Model)
+        {
+            <tr>
+                <th>@mus.MUSTERIID</th>
+                <td>@mus.MUSTERIAD</td>
+                <td>@mus.MUSTERISOYAD</td>
+            </tr>
+        }
+    </tbody>
+
